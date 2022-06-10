@@ -24,8 +24,7 @@ const calcRandomExpression = () => {
       strExpression = `${a}*${b}`;
       return [strExpression, a * b];
   }
-  
-}
+};
 
 const calcGame = () => {
   let countAnswers = 0;
@@ -33,7 +32,7 @@ const calcGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const resultArray = calcRandomExpression();
     const correctAnswer = String(resultArray[1]);
-    
+
     const playerAnswer = readlineSync.question(`Question: ${resultArray[0]}\nYour answer: `);
     if (playerAnswer !== correctAnswer) {
       console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
@@ -45,6 +44,6 @@ const calcGame = () => {
   if (countAnswers === 3) {
     console.log('Congratulations!');
   }
-}
+};
 
 calcGame();
