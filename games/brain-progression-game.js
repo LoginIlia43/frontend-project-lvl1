@@ -21,7 +21,7 @@ const generateRound = () => {
   }
 
   //Hide the element
-  const numHideElem = lodash.random(0, 10);
+  const numHideElem = lodash.random(0, 9);
   const hiddenElement = String(progression[numHideElem]);
   progression[numHideElem] = '..';
 
