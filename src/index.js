@@ -21,7 +21,7 @@ const gameFunc = (helloFn, questionFn, gameFn) => {
     }
   }
   if (roundCounter === 3) {
-    console.log('Congratulations!');
+    console.log(`Congratulations, ${name}!`);
   }
 };
 
