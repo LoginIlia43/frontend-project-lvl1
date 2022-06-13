@@ -15,7 +15,7 @@ const isEven = (number) => {
 const generateRound = () => {
   const question = randomNumb();
   const answer = isEven(question);
-return [question, answer];
+  return [question, answer];
 };
 
 export { questionFn, generateRound };
