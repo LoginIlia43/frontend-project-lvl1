@@ -10,19 +10,22 @@ const generateRound = () => {
   const b = randomNumb();
   const operatorIndex = lodash.random(1, 3);
   let question;
+  let answer;
 
   switch (operatorIndex) {
     case 1:
       question = `${a} + ${b}`;
-      return [question, String(a + b)];
+      answer = String(a + b);
+      break;
     case 2:
       question = `${a} - ${b}`;
-      return [question, String(a - b)];
-    case 3:
+      answer = String(a - b);
+      break;
+    default:
       question = `${a} * ${b}`;
-      return [question, String(a * b)];
+      answer = String(a * b);
   }
+  return [question, answer];
 };
 
 export { questionFn, generateRound };
-
