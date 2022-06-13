@@ -29,7 +29,8 @@ const generateRound = () => {
     answer = String(num1 + num2);
   } else {
     const answerArray = [];
-    for (const elem of dividersNum1) {
+    for (let i = 0; i < dividersNum1.length; i += 1) {
+      const elem = dividersNum1[i];
       if (dividersNum2.includes(elem)) {
         answerArray.push(elem);
       }
