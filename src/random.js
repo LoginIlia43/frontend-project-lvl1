@@ -1,7 +1,7 @@
 import lodash from 'lodash';
 
 const randomNumb = () => {
-  const result = lodash.random(0, 10);
+  const result = lodash.random(0, 100);
   return result;
 };
 
