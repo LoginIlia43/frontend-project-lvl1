@@ -22,11 +22,11 @@ const generateRound = () => {
   const dividersNum1 = dividers(num1);
   const dividersNum2 = dividers(num2);
   let answer;
-  
+
   if (num1 === 0 && num2 === 0) {
     answer = '1';
-  }else if (num1 === 0 || num2 === 0) {
-      answer = String(num1 + num2);
+  } else if (num1 === 0 || num2 === 0) {
+    answer = String(num1 + num2);
   } else {
     const answerArray = [];
     for (const elem of dividersNum1) {

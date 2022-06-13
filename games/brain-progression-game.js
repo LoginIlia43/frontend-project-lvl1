@@ -23,7 +23,7 @@ const generateRound = () => {
   const hiddenElement = String(progression[numHideElem]);
   progression[numHideElem] = '..';
 
-  return [progression, hiddenElement];
+  return [progression.join(' '), hiddenElement];
 };
 
 export { questionFn, generateRound };
