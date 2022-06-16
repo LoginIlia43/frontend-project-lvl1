@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import randomNumb from '../random.js';
+import getRandom from '../random.js';
 
-const questionFn = () => {
+const question = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
 
@@ -13,9 +13,9 @@ const isEven = (number) => {
 };
 
 const generateRound = () => {
-  const question = randomNumb();
-  const answer = isEven(question);
-  return [question, answer];
+  const quest = getRandom(0, 100);
+  const answer = isEven(quest);
+  return [quest, answer];
 };
 
-export { questionFn, generateRound };
+export { question, generateRound };

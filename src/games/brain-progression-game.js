@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 import lodash from 'lodash';
-import randomNumb from '../random.js';
+import getRandom from '../random.js';
 
-const questionFn = () => {
+const question = () => {
   console.log('What number is missing in the progression?');
 };
 
 const generateRound = () => {
-  const startNumber = randomNumb();
-  const progressionStep = randomNumb();
+  const startNumber = getRandom(0, 100);
+  const progressionStep = getRandom(0, 30);
   const progression = [startNumber];
 
   // Generate a progression
@@ -19,11 +19,11 @@ const generateRound = () => {
   }
 
   // Hide the element
-  const numHideElem = lodash.random(0, 9);
+  const numHideElem = getRandom(0, 9);
   const hiddenElement = String(progression[numHideElem]);
   progression[numHideElem] = '..';
 
   return [progression.join(' '), hiddenElement];
 };
 
-export { questionFn, generateRound };
+export { question, generateRound };

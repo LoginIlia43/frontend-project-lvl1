@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import randomNumb from '../random.js';
+import getRandom from '../random.js';
 
-const questionFn = () => {
+const question = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 };
 
@@ -19,9 +19,9 @@ const isPrime = (number) => {
 };
 
 const generateRound = () => {
-  const question = randomNumb();
-  const answer = isPrime(question);
-  return [question, answer];
+  const quest = getRandom(0, 100);
+  const answer = isPrime(quest);
+  return [quest, answer];
 };
 
-export { questionFn, generateRound };
+export { question, generateRound };

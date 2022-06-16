@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import randomNumb from '../random.js';
+import getRandom from '../random.js';
 
-const questionFn = () => {
+const question = () => {
   console.log('Find the greatest common divisor of given numbers.');
 };
 
@@ -16,9 +16,9 @@ const dividers = (number) => {
 };
 
 const generateRound = () => {
-  const num1 = randomNumb();
-  const num2 = randomNumb();
-  const question = [num1, num2].join(' ');
+  const num1 = getRandom(0, 100);
+  const num2 = getRandom(0, 100);
+  const quest = [num1, num2].join(' ');
   const dividersNum1 = dividers(num1);
   const dividersNum2 = dividers(num2);
   let answer;
@@ -37,7 +37,7 @@ const generateRound = () => {
     }
     answer = String(answerArray[answerArray.length - 1]);
   }
-  return [question, answer];
+  return [quest, answer];
 };
 
-export { questionFn, generateRound };
+export { question, generateRound };

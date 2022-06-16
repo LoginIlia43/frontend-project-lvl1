@@ -1,14 +1,13 @@
-import lodash from 'lodash';
-import randomNumb from '../random.js';
+import getRandom from '../random.js';
 
-const questionFn = () => {
+const question = () => {
   console.log('What is the result of the expression?');
 };
 
 const generateRound = () => {
-  const a = randomNumb();
-  const b = randomNumb();
-  const operatorIndex = lodash.random(1, 3);
+  const a = getRandom(0, 100);
+  const b = getRandom(0, 100);
+  const operatorIndex = getRandom(1, 3);
   let question;
   let answer;
 
@@ -28,4 +27,4 @@ const generateRound = () => {
   return [question, answer];
 };
 
-export { questionFn, generateRound };
+export { question, generateRound };
