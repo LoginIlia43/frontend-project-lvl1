@@ -1,6 +1,5 @@
-#! /usr/bin/env node
-import helloFn from '../src/hello.js';
+#!/usr/bin/env node
 import { question, generateRound } from '../src/games/brain-prime-game.js';
-import gameFunc from '../src/index.js';
+import gameEngine from '../src/index.js';
 
-gameFunc(helloFn, question, generateRound);
+gameEngine(question, generateRound);
