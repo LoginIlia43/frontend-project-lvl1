@@ -8,23 +8,23 @@ const generateRound = () => {
   const a = getRandom(0, 100);
   const b = getRandom(0, 100);
   const operatorIndex = getRandom(1, 3);
-  let question;
+  let quest;
   let answer;
 
   switch (operatorIndex) {
     case 1:
-      question = `${a} + ${b}`;
+      quest = `${a} + ${b}`;
       answer = String(a + b);
       break;
     case 2:
-      question = `${a} - ${b}`;
+      quest = `${a} - ${b}`;
       answer = String(a - b);
       break;
     default:
-      question = `${a} * ${b}`;
+      quest = `${a} * ${b}`;
       answer = String(a * b);
   }
-  return [question, answer];
+  return [quest, answer];
 };
 
 export { question, generateRound };
