@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import randomNumb from '../src/random.js';
+import randomNumb from '../random.js';
 
 const questionFn = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');

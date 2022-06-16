@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import randomNumb from '../src/random.js';
+import randomNumb from '../random.js';
 
 const questionFn = () => {
   console.log('Find the greatest common divisor of given numbers.');

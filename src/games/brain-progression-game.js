@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import lodash from 'lodash';
-import randomNumb from '../src/random.js';
+import randomNumb from '../random.js';
 
 const questionFn = () => {
   console.log('What number is missing in the progression?');

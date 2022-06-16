@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import randomNumb from '../src/random.js';
+import randomNumb from '../random.js';
 
 const questionFn = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
