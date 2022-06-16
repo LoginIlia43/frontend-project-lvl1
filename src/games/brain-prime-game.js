@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import getRandom from '../random.js';
 
 const question = () => {

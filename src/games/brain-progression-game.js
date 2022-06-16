@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-import lodash from 'lodash';
 import getRandom from '../random.js';
 
 const question = () => {
