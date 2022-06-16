@@ -11,7 +11,7 @@ const isPrime = (number) => {
       dividersCounter += 1;
     }
   }
-  if (dividersCounter < 2) {
+  if (dividersCounter < 2 && number > 1) {
     return 'yes';
   }
   return 'no';
