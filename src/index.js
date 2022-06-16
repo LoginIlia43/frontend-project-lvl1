@@ -6,22 +6,21 @@ const gameEngine = (question, game) => {
   console.log(`Hello, ${name}!`); // Запуск приветствия и присвоение имени
 
   question(); // Запуск вопроса игры
-  
+
   const roundsCount = 3;
   for (let i = 0; i < roundsCount; i += 1) { // Запуск раундов
-    const resultArray = (game());
-    const correctAnswer = resultArray[1];
-    console.log(`Question: ${resultArray[0]}`);
+    const result = (game());
+    const correctAnswer = result[1];
+    console.log(`Question: ${result[0]}`);
     const userAnswer = readlineSync.question('Answer: ');
 
     if (correctAnswer === userAnswer) {
       console.log('Correct!');
-      roundCounter += 1;
     } else {
       return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  return console.log(`Congratulations, ${name}!`);
 };
 
 export default gameEngine;

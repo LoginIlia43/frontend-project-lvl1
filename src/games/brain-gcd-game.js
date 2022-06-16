@@ -5,13 +5,13 @@ const question = () => {
 };
 
 const dividers = (number) => {
-  const resultArray = [];
+  const result = [];
   for (let i = 1; i <= number; i += 1) {
     if (number % i === 0) {
-      resultArray.push(i);
+      result.push(i);
     }
   }
-  return resultArray;
+  return result;
 };
 
 const generateRound = () => {
