@@ -14,7 +14,7 @@ const calculate = (firstNumber, secondNumber, operator) => {
     default:
       throw new Error(`${operator} - don't supported`);
   }
-}
+};
 
 const generateRound = () => {
   const firstNumber = getRandom(0, 100);
