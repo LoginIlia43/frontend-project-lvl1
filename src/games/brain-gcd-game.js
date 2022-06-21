@@ -1,8 +1,6 @@
 import getRandom from '../random.js';
 
-const question = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-};
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const dividers = (number) => {
   const result = [];
@@ -39,4 +37,4 @@ const generateRound = () => {
   return [quest, answer];
 };
 
-export { question, generateRound };
+export { gameDescription, generateRound };

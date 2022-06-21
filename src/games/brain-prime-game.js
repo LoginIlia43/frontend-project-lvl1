@@ -1,8 +1,6 @@
 import getRandom from '../random.js';
 
-const question = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-};
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   let dividersCounter = 0;
@@ -23,4 +21,4 @@ const generateRound = () => {
   return [quest, answer];
 };
 
-export { question, generateRound };
+export { gameDescription, generateRound };

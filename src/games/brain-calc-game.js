@@ -1,8 +1,6 @@
 import getRandom from '../random.js';
 
-const question = () => {
-  console.log('What is the result of the expression?');
-};
+const gameDescription = 'What is the result of the expression?';
 
 const generateRound = () => {
   const a = getRandom(0, 100);
@@ -27,4 +25,4 @@ const generateRound = () => {
   return [quest, answer];
 };
 
-export { question, generateRound };
+export { gameDescription, generateRound };

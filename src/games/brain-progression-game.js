@@ -1,8 +1,6 @@
 import getRandom from '../random.js';
 
-const question = () => {
-  console.log('What number is missing in the progression?');
-};
+const gameDescription = 'What number is missing in the progression?';
 
 const generateRound = () => {
   const startNumber = getRandom(0, 100);
@@ -24,4 +22,4 @@ const generateRound = () => {
   return [progression.join(' '), hiddenElement];
 };
 
-export { question, generateRound };
+export { gameDescription, generateRound };
