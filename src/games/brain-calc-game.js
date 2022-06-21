@@ -1,28 +1,29 @@
 import getRandom from '../random.js';
 
 const gameDescription = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
+
+const calculate = (firstNumber, secondNumber, operator) => {
+  switch (operator) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    default:
+      throw new Error(`${operator} - don't supported`);
+  }
+}
 
 const generateRound = () => {
-  const a = getRandom(0, 100);
-  const b = getRandom(0, 100);
-  const operatorIndex = getRandom(1, 3);
-  let quest;
-  let answer;
+  const firstNumber = getRandom(0, 100);
+  const secondNumber = getRandom(0, 100);
+  const operatorIndex = getRandom(0, 2);
+  const question = `${firstNumber} ${operators[operatorIndex]} ${secondNumber}`;
+  const answer = String(calculate(firstNumber, secondNumber, operators[operatorIndex]));
 
-  switch (operatorIndex) {
-    case 1:
-      quest = `${a} + ${b}`;
-      answer = String(a + b);
-      break;
-    case 2:
-      quest = `${a} - ${b}`;
-      answer = String(a - b);
-      break;
-    default:
-      quest = `${a} * ${b}`;
-      answer = String(a * b);
-  }
-  return [quest, answer];
+  return [question, answer];
 };
 
 export { gameDescription, generateRound };
